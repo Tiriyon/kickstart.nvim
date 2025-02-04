@@ -593,7 +593,27 @@ require('lazy').setup({
         },
         -- clangd = {},
         -- gopls = {},
-        -- pyright = {},
+        pyright = {
+          settings = {
+            python = {
+              analysis = {
+                autoSearchPaths = true,
+                useLibraryCodeForTypes = true,
+                diagnosticMode = 'workspace',
+              },
+            },
+          },
+        },
+        --ruff_lsp = {}, -- Linting with Ruff
+        black = {}, -- Autoformatting with Black
+        isort = {}, -- Sorting imports
+
+        ---- Ah
+        --black = {},
+        --debugpy = {},
+        --isort = {},
+        ----rufflsp = {},
+        --taplo = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
